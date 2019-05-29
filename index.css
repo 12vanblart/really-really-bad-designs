@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+body {
+  font-size: 1.2rem;
+  background-color: #2e2e2e;
+}
+
+.article-header {
+  border-bottom: 1px solid yellowgreen;
+  color: white;
+}
+.article-body {
+  line-height: 2rem;
+}
+
+.article-img {
+  padding: 7px;
+  margin-right: 15px;
+}
+
+.card {
+  background-color: violet;
+  padding: 15px;
+  border: 1px solid grey;
+  border-radius: 7px;
+}
+
+header {
+  background-color: teal;
+  border-bottom: 1px solid teal;
+  grid-area: header;
+  padding: 0 65px;
+}
+
+header ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header li {
+  place-self: center;
+  padding: 0 10px;
+}
+
+#title {
+  display: inline-block;
+  color: white;
+  padding: 7px 15px;
+}
+
+footer {
+  background-color: grey;
+  color: white;
+  text-align: center;
+  grid-area: footer;
+  padding: 15px 0;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 50px;
+  grid-template-rows: auto 1fr 1fr 1fr 50px;
+  grid-gap: 20px;
+  grid-template-areas:
+    "header header header header"
+    ". card1 . ."
+    ". . card2 ."
+    ". card3 . ."
+    "footer footer footer footer";
+  min-height: 100vh;
+}
+
+.card1 {
+  grid-area: card1;
+  box-shadow: 5px 5px 5px orange;
+  color: whitesmoke;
+}
+
+.card2 {
+  grid-area: card2;
+  box-shadow: 5px 5px 5px deeppink;
+  color: gainsboro;
+}
+
+.card3 {
+  grid-area: card3;
+  box-shadow: 5px 5px 5px blue;
+  color: floralwhite;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+}
